@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-
 export default function Home() {
+    let name = 'kim'
     return (
-        <div>
-            <h1 className='test'>start next.js</h1>
-        </div>
+        <>
+            <h4 className="title">쿠팡후레시</h4>
+            <p className="title-sub">by dev {name}</p>
+        </>
     )
 }
