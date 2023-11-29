@@ -1,15 +1,22 @@
+'use client'
 import price from './data.js';
 export default function Cart() {
     let items = ['그램', '맥']
-    let card = ['현대카드', '신한카드', '롯데카드']
+    let cards = {
+        '현대카드': '현대카드 무이자 할부 5개월!',
+        '롯데카드': '롯데카드 무이자 할부 12개월!',
+        '신한카드': '신한카드 무이자 할부 9개월!'
+    }
+    
     let colors = {
         red: 'red',
         blue: 'blue'
     }
+    
     return (
         <div>
             <h4 className="title">Cart</h4>
-            <Banner card={card}/>
+            <Banner cards={cards}/>
             <CartItem items={items}/>
             <Button colors={colors}/>
         </div>
@@ -18,8 +25,9 @@ export default function Cart() {
 
 
 function Banner(props) {
+    let cardName = '신한카드'
     return (
-        <h1>{props.card[0]} 무이자 할부 5개월!</h1>
+        <h1>{props.cards[cardName]}</h1>
     )
 }
 
